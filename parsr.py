@@ -39,26 +39,32 @@ def INT(args):
 #This is Parser.
 func_vars = ["INT","STR","ADD","SUB","MUL","DIV","PRINT"]
 t_list = []
+#tempVar = [0,1,2,3,4,5,6,7,8,9]
 def parser(args):
 	tokens = lx.lexer(args)
 #	print(values)
 	if tokens[0] in func_vars:
 		if tokens[0] == 'PRINT':
 			print(tokens[1])
-		else:
+		elif tokens[0] != 'PRINT':
 			for ii in tokens[1]:
-				if ii in [i for i in range(0,10)]:
+				if ii in [str(i) for i in range(0,10)]:
 					operand = int(ii)
 					#t_list = []
 					t_list.append(operand)
+#			print(t_list)
 			if tokens[0] == 'ADD':
 				print(ADD(*t_list))
+				t_list.clear()
 			if tokens[0] == 'SUB':
 				print(SUB(*t_list))
+				t_list.clear()
 			if tokens[0] == 'MUL':
 				print(MUL(*t_list))
+				t_list.clear()
 			if tokens[0] == 'DIV':
 				print(DIV(*t_list))
+				t_list.clear()
 	else:
 		print('CommandError : Invalid command.')
 
