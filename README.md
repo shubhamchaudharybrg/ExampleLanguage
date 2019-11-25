@@ -25,13 +25,17 @@ BASIC >> MUL 3,4
 12
 
 BASIC >> PRINT Hello World!
+
 Hello World!
 
 BASIC >> print hello world!
+
 SyntaxError : Commands must be in upper case.
+
 CommandError : Invalid command.                                              
 
 BASIC >> PRINTT hello
+
 CommandError : Invalid command.
 
 BASIC >>
