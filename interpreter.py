@@ -6,7 +6,7 @@ def interpreter():
 #Terminal of the BASIC.
 	while True:
 		ip = input('BASIC >> ')
-		if ip == 'exit':
+		if ip == 'EXIT':
 			break
 		else:
 			pr.parser(ip)
